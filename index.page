@@ -1,0 +1,55 @@
+<h1>Electric motors aren't magic</h1>
+<h2>And you shouldn't be afraid of them</h2>
+
+<p>Six years ago I was working as a programmer at a little computer gaming and
+events company in Southampton in the UK, when a colleague of mine whose work
+history could best be described as "classified" came to me with an offer I
+couldn't refuse:</p>
+
+<blockquote>Chris, d'you wanna have a go at Robot Wars?</blockquote>
+
+<p>Robot Wars, for the not-British among us, is a much-loved TV show a bit like
+BattleBots. The budgets are lower thanks to the lack of sponsors, but it's
+similar enough in that teams of weird nerds like me and my friends would spend
+all their money building a robot, then they'd go to an arena where some
+university students with a seemingly unlimited budget would blow it to
+pieces.</p>
+
+<p>This might sound like I'm bitter about getting our robot destroyed but
+actually I exploded our last working motor control board while debugging the
+drive system minutes before we were due to go into the arena, so we never even
+had the opportunity to get annihilated by the students. On reflection, I think
+I'm actually ok with that.</p>
+
+<p>We had a small problem though. The robot and its weaponry would need to be
+powered by electric brushless motors, but nobody on the team actually knew how
+those worked beyond "electrons go in, brrrr comes out". And with just five
+weeks in which to design and build our robot, we didn't have much time to learn
+so I had to cut through the noise and figure it out pretty quickly. I didn't
+quite manage that, and even while we were in Scotland at the studio I realised
+I still didn't really understand what back-EMF was or many other basic
+parameters of a motor's behaviour.</p>
+
+<p>In the years since then I've closed up those gaps by allowing my brain to
+revisit the world of electric motors, sometimes for silly thought experiments
+with my friends in Discord ("hey Chris what would happen if we bolted a Tesla
+power unit to my wheelchair"), sometimes planning upgrades for my e-bike
+project, and sometimes just out of idle curiosity. Over time I've jabbered
+excitedly about more than a few of these jokes and concepts to quite a lot of
+unfortunate nearby friends, and through doing that I've managed to build up a
+fairly intuitive mental model for how motors work, which I hope to propagate
+here today.</p>
+
+<p>Thankfully although it took me a few years to untangle in my head, all this
+stuff is actually pretty simple when presented without all the cruft.</p>
+
+<h2>The basics</h2>
+
+<p>For any guide on any subject, some knowledge must be assumed. I'm going to
+try and assume as little as possible here and cover everything from the most
+basic level I can, but I'm going to just take for granted that when you hear
+words like "volts" and "resistance" you're not going to run away. I promise
+that while we do derive quite a lot of numbers here, and we use quite a few
+terms like "back EMF constant" and other nasty sounding stuff, it's actually
+all fairly simple maths. Plain old multiplication and division.</p>
+
